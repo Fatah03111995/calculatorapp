@@ -1,3 +1,4 @@
+import 'package:calculatorapp_rep2/components/textsyle.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
@@ -47,6 +48,51 @@ class _CalculatorState extends State<Calculator> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.blue[200],
+      appBar: AppBar(
+        title: txtStyle(
+            value: 'Calculator App',
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+              color: Colors.white,
+            )),
+        centerTitle: true,
+        backgroundColor: Colors.blue[600],
+      ),
+      body: Column(
+        children: [
+          const SizedBox(height: 30),
+          Container(
+            alignment: Alignment.centerRight,
+            padding: const EdgeInsets.only(right: 30),
+            height: 50,
+            width: double.infinity,
+            color: const Color.fromRGBO(255, 255, 255, 0.3),
+            child: txtStyle(
+                value: equation,
+                style: TextStyle(
+                    color: Colors.blue[600],
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500)),
+          ),
+          Container(
+            alignment: Alignment.centerRight,
+            padding: const EdgeInsets.only(right: 30),
+            height: 70,
+            width: double.infinity,
+            color: const Color.fromRGBO(255, 255, 255, 0.3),
+            child: txtStyle(
+                value: result,
+                style: TextStyle(
+                    color: Colors.blue[600],
+                    fontSize: 32,
+                    fontWeight: FontWeight.w600)),
+          ),
+          // Button
+        ],
+      ),
+    );
   }
 }
