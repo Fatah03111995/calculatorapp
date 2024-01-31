@@ -1,8 +1,20 @@
-import 'package:calculatorapp/my_app.dart';
 import 'package:flutter/material.dart';
 
-// command to create flutter project
-// flutter create -e appname --platforms android,ios,etc
 void main() {
-  runApp(const MyApp());
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!'),
+        ),
+      ),
+    );
+  }
 }
