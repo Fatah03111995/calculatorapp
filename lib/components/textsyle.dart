@@ -5,5 +5,5 @@ Widget txtStyle({required String value, TextStyle? style}) {
   return Text(value,
       style: GoogleFonts.poppins(
           textStyle: style ??
-              const TextStyle(fontSize: 24, fontWeight: FontWeight.w500)));
+              const TextStyle(fontSize: 36, fontWeight: FontWeight.w500)));
 }
